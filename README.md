@@ -1,6 +1,6 @@
 # Bronto for Playwright
 
-`bronto-playwright` is an npm module that seamlessly integrates Bronto's visual testing tools with Playwright, enabling developers to easily implement and manage visual tests in their web applications. This integration simplifies the process of capturing and comparing visual snapshots during automated tests, helping ensure your application looks as intended on all browsers and devices.
+`@bronto.so/playwright` is an npm module that seamlessly integrates Bronto's visual testing tools with Playwright, enabling developers to easily implement and manage visual tests in their web applications. This integration simplifies the process of capturing and comparing visual snapshots during automated tests, helping ensure your application looks as intended on all browsers and devices.
 
 ## Features
 
@@ -11,19 +11,19 @@
 
 ## Installation
 
-Install `bronto-playwright` using npm:
+Install `@bronto.so/playwright` using npm:
 
 ```bash
-npm install bronto-playwright
+npm i @bronto.so/playwright
 ```
 
 ## Usage
 
-Here's a simple example to get you started with bronto-playwright:
+Here's a simple example to get you started with @bronto.so/playwright:
 
 ```javascript
 const { test, expect } = require("@playwright/test");
-const { bronto } = require("bronto-playwright");
+const bronto = require("@bronto.so/playwright");
 
 test("has title", async ({ page }, testInfo) => {
   await page.goto("https://playwright.dev/");
@@ -37,10 +37,10 @@ test("has title", async ({ page }, testInfo) => {
 
 ## Configuration
 
-Configure bronto-playwright by setting environment variables:
+Configure @bronto.so/playwright by setting environment variables:
 
-`BRONTO_EMAIL`: The email you use to login into Bronto's editor
-`BRONTO_PASSWORD`: You must set a password in order to use Bronto. You can do it trough the account page.
+- `BRONTO_EMAIL`: The email you use to login into Bronto's editor
+- `BRONTO_PASSWORD`: You must set a password in order to use Bronto. You can do it trough the account page.
 
 ## Contributing
 

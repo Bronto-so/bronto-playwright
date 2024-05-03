@@ -1,4 +1,4 @@
-const { expect } = require("@playwright/test");
+// const { expect } = require("@playwright/test");
 const { createClient } = require("@supabase/supabase-js");
 const { decode } = require("base64-arraybuffer");
 const dotenv = require("dotenv");
@@ -9,7 +9,7 @@ const ANON_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5YXR2cmx0eHBscGF1dWlzc3p5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI1OTcxNTIsImV4cCI6MjAyODE3MzE1Mn0.un4vrwhUctXBzsyHK4VCHpyqroU4i4Imz-HplO_2X-I";
 dotenv.config();
 
-export async function bronto(name, page, testInfo) {
+async function bronto(name, page, testInfo, expect) {
   // Create client
   const supabase = createClient(URL, ANON_KEY);
 
@@ -113,3 +113,5 @@ export async function bronto(name, page, testInfo) {
 
   expect(runData.status, message).toBe("success");
 }
+
+module.exports = bronto;
