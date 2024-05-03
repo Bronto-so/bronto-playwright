@@ -1,6 +1,6 @@
 {
   "name": "@bronto.so/playwright",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": false,
   "description": "Playwright integration for Bronto - Visual testing made simple.",
   "main": "src/index.js",
